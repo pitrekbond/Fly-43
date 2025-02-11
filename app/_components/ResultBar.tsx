@@ -184,7 +184,7 @@ export default function ResultBar({
           cabinClass={newCabin}
           setCabinClass={setNewCabin}
           updateURLOther={updateURLOther}
-          className="bottom-[15.3rem] left-[6.5rem]"
+          className="bottom-[15.3rem] left-[6.5rem] 2xl:bottom-[22.8rem] 2xl:left-[6.6rem]"
         />
       )}
     </>

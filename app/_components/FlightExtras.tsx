@@ -37,8 +37,8 @@ export default function FlightExtras({
   }
 
   return (
-    <div className="flex items-start gap-8 border-gray-400 border-b pb-8 mt-8">
-      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px]">
+    <div className="flex items-start justify-center gap-8 border-gray-400 border-b pb-8 mt-8">
+      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] mr-10">
         3. Travel extras <AiOutlineFileAdd className="w-10 h-10" />
       </p>
       <div className="border-2 border-gray-400 grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-6 p-2 rounded-md shadow-md">

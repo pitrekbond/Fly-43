@@ -69,7 +69,7 @@ export default function ReservationList({ items }: ReservationListProps) {
         )}
       </ul>
       <button
-        className="p-2 my-8 mr-[21.8rem] gap-2 rounded-md flex border-[1.5px] border-primary-700 transition-colors duration-300 bg-primary-950 hover:bg-primary-50 hover:text-primary-900 absolute w-[150px] h-[41.6px] top-[12.3rem] right-[1.4rem]"
+        className="p-2 my-8 mr-[21.8rem] gap-2 rounded-md flex border-[1.5px] border-primary-700 transition-colors duration-300 bg-primary-950 hover:bg-primary-50 hover:text-primary-900 absolute w-[150px] h-[41.6px] top-[12.3rem] right-[1.4rem] 2xl:right-[7.3rem]"
         onClick={handleSort}
       >
         <BiSortAlt2 className="h-6 w-6" />

@@ -138,7 +138,10 @@ export default function EditBookingForm({ booking }: EditBookingFormProps) {
             className="rounded-md px-5 py-2 w-full shadow-sm bg-primary-50 border border-black focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
             onChange={handleBreakfastChange}
           >
-            <option value="true">Yes (8€/person/night)</option>
+            <option value="true">
+              Yes ({currency === "$" ? (8 * 1.05).toFixed(0) : 8}
+              {currency}/person/night)
+            </option>
             <option value="false">No</option>
           </select>
         </div>
@@ -155,7 +158,10 @@ export default function EditBookingForm({ booking }: EditBookingFormProps) {
           className="rounded-md px-5 py-2 w-full shadow-sm bg-primary-50 border border-black focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
           onChange={handleTransferChange}
         >
-          <option value="true">Yes (20€)</option>
+          <option value="true">
+            Yes ({currency === "$" ? (20 * 1.05).toFixed(0) : 20}
+            {currency})
+          </option>
           <option value="false">No</option>
         </select>
       </div>

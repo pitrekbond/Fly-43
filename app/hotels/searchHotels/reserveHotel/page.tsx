@@ -83,8 +83,11 @@ export default async function Page({ searchParams }: PageProps) {
     <main className="mx-[200px] py-6 mb-10 h-[55rem] flex items-center flex-col">
       <h1 className="text-4xl font-semibold">Finish your hotel reservation</h1>
       <HotelReservationProvider>
-        <form action={createBookingWithData} className="flex mt-10 w-full">
-          <div className="w-[30%] flex flex-col items-center gap-2">
+        <form
+          action={createBookingWithData}
+          className="flex mt-10 w-[1182.09px] gap-2"
+        >
+          <div className="flex flex-col items-center gap-2">
             <HotelDetails
               hotel={hotel}
               city={city}
@@ -103,7 +106,7 @@ export default async function Page({ searchParams }: PageProps) {
               numberOfGuests={numberOfGuests}
             />
           </div>
-          <div className="w-[70%] flex flex-col items-end gap-2">
+          <div className="w-[852.09px] flex flex-col items-end gap-2">
             <PersonalDataHotels
               guest={guest}
               fieldNames={["fullName", "dob", "nationalID", "phoneNumber"]}

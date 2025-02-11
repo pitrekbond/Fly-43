@@ -22,8 +22,8 @@ export default function PersonalData({
   const [date, setDate] = useState<Date>(dateOfBirth || new Date());
 
   return (
-    <div className="flex items-start gap-8 border-gray-400 border-b pb-8 mt-8">
-      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px]">
+    <div className="flex items-start justify-center gap-8 border-gray-400 border-b pb-8 mt-8">
+      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] mr-10">
         2. Personal data <IoPerson className="w-10 h-10" />
       </p>
 

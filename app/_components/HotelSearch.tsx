@@ -166,7 +166,7 @@ export default function HotelSearch() {
           setRange={setRange}
           range={range}
           isReturn={true}
-          className="bottom-[0.5rem] left-[4rem]"
+          className="bottom-[0.5rem] left-[4rem] 2xl:bottom-[8rem] 2xl:left-[2rem]"
         />
       )}
       {isOpenGuestSelector && (
@@ -178,7 +178,7 @@ export default function HotelSearch() {
           setKids={setKids}
           rooms={rooms}
           setRooms={setRooms}
-          className="bottom-[10rem]"
+          className="bottom-[10rem] 2xl:bottom-[17.5rem] 2xl:left-[28.6rem]"
         />
       )}
     </>

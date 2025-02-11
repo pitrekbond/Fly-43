@@ -127,7 +127,11 @@ export default function EditFlightForm({ flight }: EditFlightFormProps) {
             onChange={handleSeatAllocationChange}
           >
             <option value="Random">Random</option>
-            <option value="Together">Passengers together (15€/person)</option>
+            <option value="Together">
+              Passengers together (
+              {currency === "$" ? (15 * 1.05).toFixed(0) : 15}
+              {currency}/person)
+            </option>
           </select>
         </div>
       )}

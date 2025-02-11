@@ -39,7 +39,7 @@ export default async function CityImg({
         loading="eager"
       />
       {isSearch && (
-        <div className="absolute bottom-[12.5rem] right-[12.5rem] text-primary-50 text-xs p-1 rounded">
+        <div className="mt-2 text-primary-50 text-xs p-1 rounded">
           Photo by{" "}
           <a
             href={`${photographerProfileUrl}?utm_source=Fly43&utm_medium=referral`}

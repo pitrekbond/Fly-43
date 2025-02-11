@@ -211,7 +211,7 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           isReturn={isReturn}
           singleDate={singleDate}
           setSingleDate={setSingleDate}
-          className="bottom-[0.5rem] left-[16rem]"
+          className="bottom-[0.5rem] left-[16rem] 2xl:bottom-[8rem] 2xl:left-[15rem]"
         />
       )}
       {isOpenGuestSelector && (
@@ -223,7 +223,7 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           setChildTicket={setChildTicket}
           cabinClass={cabinClass}
           setCabinClass={setCabinClass}
-          className="bottom-[7.5rem] left-[42rem]"
+          className="bottom-[7.5rem] left-[42rem] 2xl:bottom-[15rem] 2xl:left-[42rem]"
         />
       )}
     </>

@@ -170,7 +170,7 @@ export default function ResultBarHotels({
           rooms={newRooms}
           setRooms={setNewRooms}
           updateURLOther={updateURLOther}
-          className="bottom-[18rem] left-[33.5rem]"
+          className="bottom-[18rem] left-[33.5rem] 2xl:bottom-[25.4rem] 2xl:left-[35.2rem]"
         />
       )}
     </>

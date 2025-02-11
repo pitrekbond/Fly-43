@@ -31,13 +31,10 @@ export default function BasicFlightData({
   const displayedPrice = currency === "$" ? finalPrice * 1.05 : finalPrice;
 
   return (
-    <div className="flex items-start gap-8 border-gray-400 border-b pb-8">
-      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px]">
+    <div className="flex items-start justify-center gap-8 border-gray-400 border-b pb-8 relative">
+      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] mr-10">
         1. Flight details <IoIosAirplane className="w-10 h-10" />
       </p>
-      <span className="absolute top-[292px] right-[23.5rem] text-lg">
-        {currency}
-      </span>
 
       <div className="border-2 border-gray-400 p-2 rounded-md shadow-md grid grid-cols-4 grid-rows-2 gap-x-8 gap-y-6 w-[711.2px]">
         {/* Display flight details */}
@@ -49,7 +46,11 @@ export default function BasicFlightData({
           { label: "Adult tickets", name: "adultTicket", value: adultTickets },
           { label: "Child tickets", name: "childTicket", value: childTickets },
           { label: "Cabin class", name: "cabinClass", value: cabinClass },
-          { label: "Total price", name: "totalPrice", value: finalPrice },
+          {
+            label: `Total price (${currency})`,
+            name: "totalPrice",
+            value: finalPrice,
+          },
         ].map(({ label, name, value }) => (
           <div key={name} className="flex flex-col gap-1 items-center">
             <label className="text-sm text-accent-500">{label}</label>

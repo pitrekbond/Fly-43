@@ -2,8 +2,8 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 
 export default function AdditionalFlightData() {
   return (
-    <div className="flex items-start gap-8 pb-8 mt-8">
-      <div className="text-2xl flex flex-col items-center gap-1 w-[216.18px]">
+    <div className="flex items-start justify-center gap-8 pb-8 mt-8">
+      <div className="text-2xl flex flex-col items-center gap-1 w-[216.18px] mr-10">
         <p>4. Additional</p>
         <p>information</p>
         <IoInformationCircleOutline className="w-10 h-10 mt-3" />

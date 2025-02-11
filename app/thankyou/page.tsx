@@ -15,7 +15,7 @@ export default function Page({ searchParams }: ThankYouPageProps) {
   const { city, res } = searchParams;
 
   return (
-    <div className="text-center flex flex-col items-center space-y-6 mt-[150px]">
+    <div className="text-center flex flex-col items-center space-y-6 pt-[150px]">
       <h1 className="text-3xl font-semibold">
         Thank you for{" "}
         {res === "hotel"

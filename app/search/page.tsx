@@ -107,7 +107,7 @@ export default async function Page({ searchParams }: PageProps) {
       <Suspense fallback={<Spinner />}>
         <CityImg
           to={to}
-          className="w-[35%] flex items-center justify-center ml-30 mr-16 my-10"
+          className="w-[35%] flex justify-center ml-30 mr-16 my-10 relative flex-col items-center"
           isSearch="true"
         />
       </Suspense>
