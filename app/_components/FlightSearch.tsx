@@ -214,7 +214,7 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           isReturn={isReturn}
           singleDate={singleDate}
           setSingleDate={setSingleDate}
-          className="max-sm:bottom-6 max-sm:left-10 bottom-[0.5rem] left-[16rem] 2xl:bottom-[8rem] 2xl:left-[15rem] max-lg:bottom-[6rem] max-lg:left-[3rem]"
+          className="max-sm:bottom-12 max-sm:left-[1.2rem] bottom-[0.5rem] left-[16rem] 2xl:bottom-[8rem] 2xl:left-[15rem] max-lg:bottom-[3rem] max-lg:left-[0.8rem]"
         />
       )}
       {isOpenGuestSelector && (
