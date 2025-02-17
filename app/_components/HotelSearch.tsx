@@ -168,7 +168,7 @@ export default function HotelSearch() {
           setRange={setRange}
           range={range}
           isReturn={true}
-          className="bottom-[0.5rem] left-[4rem] 2xl:bottom-[8rem] 2xl:left-[2rem] max-sm:bottom-[14rem] max-sm:left-[1.2rem] max-lg:bottom-[12rem] max-lg:left-[0.8rem]"
+          className="bottom-[0.5rem] left-[4rem] 2xl:bottom-[8rem] 2xl:left-[2rem] max-sm:bottom-[7rem] max-sm:left-[1.2rem] max-lg:bottom-[12rem] max-lg:left-[0.8rem]"
         />
       )}
       {isOpenGuestSelector && (
