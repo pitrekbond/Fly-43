@@ -56,7 +56,7 @@ export default function DateSelector({
       <div
         className={`rounded-md max-sm:text-xs shadow-md bg-white absolute ${className} 
           sm:w-[50rem] max-lg:w-[45rem]
-          max-sm:w-[90%] max-sm:h-[70vh]`}
+          max-sm:w-[90%] max-sm:h-[75vh]`}
         onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <div className="flex flex-col">
