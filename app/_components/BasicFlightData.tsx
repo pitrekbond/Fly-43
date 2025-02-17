@@ -31,12 +31,12 @@ export default function BasicFlightData({
   const displayedPrice = currency === "$" ? finalPrice * 1.05 : finalPrice;
 
   return (
-    <div className="flex items-start justify-center gap-8 border-gray-400 border-b pb-8 relative">
-      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] mr-10">
+    <div className="flex max-lg:flex-col lg:items-start max-lg:items-center justify-center max-lg:gap-4 lg:gap-8 border-gray-400 border-b pb-8 relative">
+      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] lg:mr-10">
         1. Flight details <IoIosAirplane className="w-10 h-10" />
       </p>
 
-      <div className="border-2 border-gray-400 p-2 rounded-md shadow-md grid grid-cols-4 grid-rows-2 gap-x-8 gap-y-6 w-[711.2px]">
+      <div className="border-2 border-gray-400 p-2 rounded-md shadow-md grid max-lg:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-x-8 gap-y-6 lg:w-[711.2px]">
         {/* Display flight details */}
         {[
           { label: "Origin", name: "from", value: from },

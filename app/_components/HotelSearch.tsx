@@ -119,30 +119,30 @@ export default function HotelSearch() {
 
   return (
     <>
-      <div className="flex gap-[6px] mt-[2.3rem] h-[48px] relative">
+      <div className="flex max-lg:flex-col max-lg:items-center max-lg:gap-[12px] gap-[6px] lg:mt-[2.3rem] lg:h-[48px]">
         <CitySearch
           cityInput={cityInput}
           setCityInput={setCityInput}
           setLastSelectedCity={setLastSelectedCity}
-          className="top-[53px] left-0 rounded-l-md"
-          className2="rounded-l-md"
+          className="top-[300px] left-[80px] max-sm:top-[212px] max-sm:left-[17px] max-lg:top-[222px] max-lg:left-[153px] z-100"
+          className2="lg:rounded-l-md max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
         />
         <MainSearchButton
-          className="w-[120px]"
+          className="lg:w-[120px] max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
           onClick={() => setIsOpenDateSelector(true)}
           isActive={isOpenDateSelector}
         >
           {startDate ? startDate : "Start date"}
         </MainSearchButton>
         <MainSearchButton
-          className="w-[120px]"
+          className="lg:w-[120px] max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
           onClick={() => setIsOpenDateSelector(true)}
           isActive={isOpenDateSelector}
         >
           {endDate ? endDate : "End date"}
         </MainSearchButton>
         <MainSearchButton
-          className="w-[170px] rounded-r-md"
+          className="lg:w-[170px]  max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px] rounded-r-md"
           onClick={() => setIsOpenGuestSelector(true)}
           isActive={isOpenGuestSelector}
         >
@@ -151,14 +151,16 @@ export default function HotelSearch() {
           }`}
         </MainSearchButton>
         <button
-          className="ml-3 bg-accent-600 hover:bg-accent-700 rounded-md p-2 transition-colors font-semibold disabled:cursor-not-allowed w-[110px]"
+          className="md:ml-3 max-lg:my-4 bg-accent-600 hover:bg-accent-700 rounded-md p-2 transition-colors font-semibold disabled:cursor-not-allowed w-[110px]"
           onClick={handleSearch}
           disabled={isPending}
         >
           {isPending ? <SpinnerMini /> : "Search"}
         </button>
       </div>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
+      {error && (
+        <p className="text-red-500 lg:mt-2 max-lg:text-center">{error}</p>
+      )}
       {isOpenDateSelector && (
         //passing isReturn so that the dateSelector works correctly
         <DateSelector
@@ -166,7 +168,7 @@ export default function HotelSearch() {
           setRange={setRange}
           range={range}
           isReturn={true}
-          className="bottom-[0.5rem] left-[4rem] 2xl:bottom-[8rem] 2xl:left-[2rem]"
+          className="bottom-[0.5rem] left-[4rem] 2xl:bottom-[8rem] 2xl:left-[2rem] max-sm:bottom-6 max-sm:left-10 max-lg:bottom-[12rem] max-lg:left-[3rem]"
         />
       )}
       {isOpenGuestSelector && (
@@ -178,7 +180,7 @@ export default function HotelSearch() {
           setKids={setKids}
           rooms={rooms}
           setRooms={setRooms}
-          className="bottom-[10rem] 2xl:bottom-[17.5rem] 2xl:left-[28.6rem]"
+          className="bottom-[10rem] 2xl:bottom-[17.5rem] 2xl:left-[28.6rem] max-sm:bottom-[7.3rem] max-sm:left-[2.2rem] max-lg:bottom-[28rem] max-lg:left-[15.6rem]"
         />
       )}
     </>

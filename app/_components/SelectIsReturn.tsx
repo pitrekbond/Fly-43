@@ -11,7 +11,7 @@ export default function SelectIsReturn({ setIsReturn }: FlightFilterProps) {
   }
 
   return (
-    <div className="text-sm">
+    <div className="text-sm max-lg:flex max-lg:justify-center">
       <select
         className="bg-primary-900 text-primary-100 focus:outline-none"
         onChange={handleChange}

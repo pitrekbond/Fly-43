@@ -35,12 +35,17 @@ export default function FlightReservationForm({
           name="nationality"
           id="nationality"
           defaultCountry={guest.nationality as string}
-          className="w-[330px] bg-primary-50 text-gray-700 border border-black focus:border-transparent"
+          className="lg:w-[330px] bg-primary-50 text-gray-700 border border-black focus:border-transparent"
         />
       </PersonalData>
       <FlightExtras searchParams={searchParams} />
       <AdditionalFlightData />
-      <SubmitButton className="text-xl mr-4">Reserve flight</SubmitButton>
+      <SubmitButton
+        className="text-xl lg:mr-4"
+        className2="max-lg:justify-center"
+      >
+        Reserve flight
+      </SubmitButton>
     </form>
   );
 }

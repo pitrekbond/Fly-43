@@ -59,7 +59,7 @@ export default function ReservationList({ items }: ReservationListProps) {
 
   return (
     <>
-      <ul className="space-y-6 ml-20">
+      <ul className="space-y-6 max-lg:flex max-lg:flex-col max-lg:items-center lg:ml-20">
         {sortedItems.map((item) =>
           itemType === "flight" ? (
             <FlightCard key={item.id} flight={item} onDelete={handleDelete} />
@@ -69,7 +69,7 @@ export default function ReservationList({ items }: ReservationListProps) {
         )}
       </ul>
       <button
-        className="p-2 my-8 mr-[21.8rem] gap-2 rounded-md flex border-[1.5px] border-primary-700 transition-colors duration-300 bg-primary-950 hover:bg-primary-50 hover:text-primary-900 absolute w-[150px] h-[41.6px] top-[12.3rem] right-[1.4rem] 2xl:right-[7.3rem]"
+        className="p-2 my-8 mr-[21.8rem] gap-2 rounded-md flex border-[1.5px] border-primary-700 transition-colors duration-300 bg-primary-950 hover:bg-primary-50 hover:text-primary-900 absolute w-[150px] h-[41.6px] top-[12.3rem] right-[1.4rem] 2xl:right-[7.3rem] max-lg:hidden"
         onClick={handleSort}
       >
         <BiSortAlt2 className="h-6 w-6" />

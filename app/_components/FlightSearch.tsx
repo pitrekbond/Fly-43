@@ -148,13 +148,13 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
 
   return (
     <>
-      <div className="flex gap-[6px] mt-4 h-[48px]">
+      <div className="flex max-lg:flex-col max-lg:items-center max-lg:gap-[12px] gap-[6px] mt-4 lg:h-[48px]">
         <CitySearch
           cityInput={from}
           setCityInput={setFrom}
           setLastSelectedCity={setLastSelectedFrom}
-          className="top-[386px] left-[105px]"
-          className2="rounded-l-md"
+          className="top-[300px] left-[80px] max-sm:top-[250px] max-sm:left-[17px] max-lg:top-[260px] max-lg:left-[153px]"
+          className2="lg:rounded-l-md max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
         />
         <ExchangeButton
           from={from}
@@ -170,24 +170,25 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           cityInput={to}
           setCityInput={setTo}
           setLastSelectedCity={setLastSelectedTo}
-          className="top-[386px] left-[323px]"
+          className="top-[300px] left-[298px] max-sm:left-[17px] max-sm:top-[346px] max-lg:top-[354px] max-lg:left-[153px] "
+          className2="max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
         />
         <MainSearchButton
-          className="w-[120px]"
+          className="lg:w-[120px] max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
           onClick={() => setIsOpenDateSelector(true)}
         >
           {departureDate ? departureDate : "Departure"}
         </MainSearchButton>
         {isReturn && (
           <MainSearchButton
-            className="w-[120px]"
+            className="lg:w-[120px] max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px]"
             onClick={() => setIsOpenDateSelector(true)}
           >
             {returnDate ? returnDate : "Return"}
           </MainSearchButton>
         )}
         <MainSearchButton
-          className="w-[170px] rounded-r-md"
+          className="lg:w-[170px]  max-sm:w-[90%] max-lg:w-[60%] max-lg:rounded-md max-lg:h-[36px] rounded-r-md"
           onClick={() => setIsOpenGuestSelector(true)}
         >
           {`${numberOfTickets} Traveler${
@@ -195,14 +196,16 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           }, ${cabinClass}`}
         </MainSearchButton>
         <button
-          className="ml-3 bg-accent-600 hover:bg-accent-700 rounded-md p-2 transition-colors font-semibold disabled:cursor-not-allowed w-[110px]"
+          className="md:ml-3 max-lg:my-4 bg-accent-600 hover:bg-accent-700 rounded-md p-2 transition-colors font-semibold disabled:cursor-not-allowed w-[110px]"
           onClick={handleSearch}
           disabled={isPending}
         >
           {isPending ? <SpinnerMini /> : "Search"}
         </button>
       </div>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
+      {error && (
+        <p className="text-red-500 lg:mt-2 max-lg:text-center">{error}</p>
+      )}
       {isOpenDateSelector && (
         <DateSelector
           onClose={() => setIsOpenDateSelector(false)}
@@ -211,7 +214,7 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           isReturn={isReturn}
           singleDate={singleDate}
           setSingleDate={setSingleDate}
-          className="bottom-[0.5rem] left-[16rem] 2xl:bottom-[8rem] 2xl:left-[15rem]"
+          className="max-sm:bottom-6 max-sm:left-10 bottom-[0.5rem] left-[16rem] 2xl:bottom-[8rem] 2xl:left-[15rem] max-lg:bottom-[6rem] max-lg:left-[3rem]"
         />
       )}
       {isOpenGuestSelector && (
@@ -223,7 +226,7 @@ export default function FlightSearch({ isReturn }: FlightSearchProps) {
           setChildTicket={setChildTicket}
           cabinClass={cabinClass}
           setCabinClass={setCabinClass}
-          className="bottom-[7.5rem] left-[42rem] 2xl:bottom-[15rem] 2xl:left-[42rem]"
+          className="bottom-[7.5rem] left-[42rem] 2xl:bottom-[15rem] 2xl:left-[42rem] max-sm:bottom-[19.5rem] max-sm:left-[2.2rem] max-lg:bottom-[17rem] max-lg:left-[15.6rem]"
         />
       )}
     </>

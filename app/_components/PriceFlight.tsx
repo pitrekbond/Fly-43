@@ -60,7 +60,7 @@ export default function PriceFlight({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-1/3 border-l border-gray-300 py-4">
+    <div className="flex flex-col max-sm:flex-row items-center max-sm:gap-3 justify-between max-sm:bg-primary-50 md:justify-center max-sm:w-full w-1/3 max-sm:border  md:border-l border-gray-300 py-4 max-sm:rounded-md max-sm:mt-3 max-sm:px-2">
       <p className="text-sm">Total price</p>
       <p className="text-lg text-black font-semibold">
         {displayedPrice}

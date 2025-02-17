@@ -83,7 +83,7 @@ export default function BookingCard({ booking, onDelete }: BookingCardProps) {
 
   return (
     <>
-      <li className="flex border border-gray-700 bg-primary-50 w-[75%] text-gray-700">
+      <li className="flex max-sm:flex-col border border-gray-700 bg-primary-50 w-[75%] text-gray-700">
         <div className="relative h-[142.4px] aspect-square">
           <Image
             src={image}
@@ -93,9 +93,9 @@ export default function BookingCard({ booking, onDelete }: BookingCardProps) {
           />
         </div>
 
-        <div className="flex-grow px-6 py-3 flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold flex gap-2">
+        <div className="flex-grow max-sm:px-1 px-6 py-3 flex flex-col gap-4">
+          <div className="flex items-center lg:justify-between max-lg:gap-4">
+            <h3 className="max-sm:text-base max-lg:text-center text-xl font-semibold flex gap-2">
               {numNights} night{numNights > 1 && "s"} in {city}
               {flag && (
                 <Image
@@ -109,66 +109,66 @@ export default function BookingCard({ booking, onDelete }: BookingCardProps) {
               )}
             </h3>
             {isToday(startingDate) || isTodayWithinRange ? (
-              <span className="bg-yellow-300 text-white h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-yellow-300 text-white h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Current
               </span>
             ) : isPast(startingDate) ? (
-              <span className="bg-yellow-800 text-yellow-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-yellow-800 text-yellow-200 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Past
               </span>
             ) : (
-              <span className="bg-green-800 text-green-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-green-800 text-green-200 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Upcoming
               </span>
             )}
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center md:justify-between max-sm:gap-4">
             <p className="text-lg text-gray-500">
               {format(startingDate, "EEE, MMM dd yyyy")} (
               {formatDistanceFromNow(startDate)}) —{" "}
               {format(endingDate, "EEE, MMM dd yyyy")}
             </p>
             {hotel === "Budget" ? (
-              <span className="border border-gray-400 text-orange-800 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="border border-gray-400 text-orange-800 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Budget
               </span>
             ) : hotel === "Comfort" ? (
-              <span className="border border-gray-400 text-gray-500 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="border border-gray-400 text-gray-500 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Comfort
               </span>
             ) : (
-              <span className="border border-gray-400 text-rose-700 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="border border-gray-400 text-rose-700 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Luxury
               </span>
             )}
           </div>
 
-          <div className="flex gap-5 mt-auto items-baseline">
+          <div className="flex gap-2 md:gap-5 mt-auto items-baseline max-sm:items-center">
             <p className="text-xl font-semibold text-accent-600">
               {currency}
               {currency === "$" ? (price * 1.05).toFixed(0) : price}
             </p>
             <p className="text-gray-500">&bull;</p>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-500 max-lg:text-center">
               {adults} adult{adults > 1 && "s"}
               {kids > 0 && `, ${kids} child${kids > 1 ? "ren" : ""}`}
             </p>
             <p className="text-gray-500">&bull;</p>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-500 max-lg:text-center">
               {rooms} room{rooms > 1 && "s"}
             </p>
-            <p className="ml-auto text-sm text-gray-500">
+            <p className="ml-auto text-sm text-gray-500 max-lg:hidden">
               Booked {format(new Date(created_at), "EEE, MMM dd yyyy, p")}
             </p>
           </div>
         </div>
-        <div className="flex flex-col border-l border-gray-700 w-[100px]">
+        <div className="flex flex-col max-sm:flex-row max-sm:border-t max-sm:h-[45px] md:border-l border-gray-700 max-sm:w-full w-[100px]">
           {!isPast(endingDate) && !isTodayWithinRange ? (
             <>
               <Link
                 href={`/reservations/bookings/editBooking/${id}`}
-                className="group flex items-center gap-2 uppercase text-xs font-bold text-gray-500 border-b border-gray-700 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+                className="group flex items-center max-sm:justify-center gap-2 uppercase text-xs font-bold text-gray-500 max-sm:border-r md:border-b border-gray-700 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
               >
                 <PencilSquareIcon className="h-5 w-5 text-gray-500 group-hover:text-primary-50 transition-colors" />
                 <span className="mt-1">Edit</span>
@@ -178,7 +178,7 @@ export default function BookingCard({ booking, onDelete }: BookingCardProps) {
           ) : (
             <button
               onClick={() => setIsOpenDetails(true)}
-              className="group flex items-center gap-2 uppercase text-xs font-bold text-gray-500  flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+              className="group flex max-lg:flex-col max-lg:justify-center items-center max-sm:justify-center gap-2 uppercase text-xs font-bold text-gray-500  flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
             >
               <EyeIcon className="h-5 w-5 text-gray-500 group-hover:text-primary-50 transition-colors" />
               <span className="mt-1">View</span>

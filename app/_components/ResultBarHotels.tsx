@@ -94,65 +94,70 @@ export default function ResultBarHotels({
 
   return (
     <>
-      <div className="flex gap-[6px] mt-4 h-[48px]">
-        <div className="bg-primary-950 px-4 flex items-center rounded-md max-w-[386px]">
+      <div className="flex max-sm:flex-col max-lg:justify-center max-sm:items-center gap-[6px] mt-4 md:h-[48px]">
+        <div className="bg-primary-950 px-4 flex items-center rounded-md  max-w-[386px] max-sm:mb-4">
           {city}
         </div>
 
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-          onClick={() =>
-            handleSubstractDay(newStartDate, setNewStartDate, "startDate")
-          }
-          disabled={startDate === formattedToday}
-        >
-          <GrPrevious className="h-5 w-5" />
-        </button>
-        <div className="w-[110px] flex-none">
-          <div className="h-full flex items-center justify-center">
-            <span className="text-center block w-full truncate">
-              {formattedStartDate}
-            </span>
+        <div className="flex gap-[6px]">
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+            onClick={() =>
+              handleSubstractDay(newStartDate, setNewStartDate, "startDate")
+            }
+            disabled={startDate === formattedToday}
+          >
+            <GrPrevious className="h-5 w-5" />
+          </button>
+          <div className="w-[110px] flex-none">
+            <div className="h-full flex items-center justify-center">
+              <span className="text-center block w-full truncate">
+                {formattedStartDate}
+              </span>
+            </div>
           </div>
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+            onClick={() =>
+              handleAddDay(newStartDate, setNewStartDate, "startDate")
+            }
+            disabled={!isValidDates}
+          >
+            <GrNext className="h-5 w-5" />
+          </button>
         </div>
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-          onClick={() =>
-            handleAddDay(newStartDate, setNewStartDate, "startDate")
-          }
-          disabled={!isValidDates}
-        >
-          <GrNext className="h-5 w-5" />
-        </button>
         <div className="flex items-center justify-center">
           <BsDot className="h-5 w-5" />
         </div>
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-          onClick={() =>
-            handleSubstractDay(newEndDate, setNewEndDate, "endDate")
-          }
-          disabled={!isValidDates}
-        >
-          <GrPrevious className="h-5 w-5" />
-        </button>
-        {/*so many divs because otherwise the layout shifts for some reason*/}
-        <div className="w-[110px] flex-none">
-          <div className="h-full flex items-center justify-center">
-            <span className="text-center block w-full truncate">
-              {formattedDateE}
-            </span>
+        <div className="flex gap-[6px]">
+          {" "}
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+            onClick={() =>
+              handleSubstractDay(newEndDate, setNewEndDate, "endDate")
+            }
+            disabled={!isValidDates}
+          >
+            <GrPrevious className="h-5 w-5" />
+          </button>
+          {/*so many divs because otherwise the layout shifts for some reason*/}
+          <div className="w-[110px] flex-none">
+            <div className="h-full flex items-center justify-center">
+              <span className="text-center block w-full truncate">
+                {formattedDateE}
+              </span>
+            </div>
           </div>
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md"
+            onClick={() => handleAddDay(newEndDate, setNewEndDate, "endDate")}
+          >
+            <GrNext className="h-5 w-5" />
+          </button>
         </div>
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md"
-          onClick={() => handleAddDay(newEndDate, setNewEndDate, "endDate")}
-        >
-          <GrNext className="h-5 w-5" />
-        </button>
 
         <button
-          className="bg-primary-950 px-4 flex items-center rounded-md max-w-[386px] truncate hover:bg-[#1e083e] transition-colors"
+          className="bg-primary-950 px-4 flex items-center rounded-md max-w-[386px] truncate hover:bg-[#1e083e] transition-colors max-sm:mt-4"
           style={{ wordWrap: "break-word", whiteSpace: "normal" }}
           onClick={() => setIsOpenGuestSelector(true)}
         >
@@ -170,7 +175,7 @@ export default function ResultBarHotels({
           rooms={newRooms}
           setRooms={setNewRooms}
           updateURLOther={updateURLOther}
-          className="bottom-[18rem] left-[33.5rem] 2xl:bottom-[25.4rem] 2xl:left-[35.2rem]"
+          className="bottom-[18rem] left-[33.5rem] 2xl:bottom-[25.4rem] 2xl:left-[35.2rem] max-sm:bottom-[14.8rem] max-sm:left-[2.2rem] max-lg:bottom-[43rem] max-lg:left-[27.1rem]"
         />
       )}
     </>

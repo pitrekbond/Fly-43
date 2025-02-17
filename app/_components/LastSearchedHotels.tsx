@@ -33,9 +33,11 @@ export default function LastSearchedHotels() {
   if (searchHistory.length === 0) return null;
 
   return (
-    <div className="absolute flex flex-col left-24 top-[35rem]">
-      <h2 className="text-2xl font-semibold mb-2">Last Searched Hotels</h2>
-      <div className="gap-10 flex">
+    <div className="flex flex-col mt-10 lg:ml-[6.5rem] max-sm:mb-6">
+      <h2 className="text-2xl font-semibold mb-2 max-lg:text-center">
+        Last Searched Hotels
+      </h2>
+      <div className="max-lg:gap-4 gap-10 flex max-sm:flex-col max-sm:items-center max-lg:justify-center">
         {searchHistory.map((search, index) => {
           const searchParams = new URLSearchParams({
             city: search.city,
@@ -51,11 +53,13 @@ export default function LastSearchedHotels() {
             <Link
               key={index}
               href={`/hotels/searchHotels?${searchParams.toString()}`}
-              className="bg-primary-900  hover:bg-primary-800 transition-transform transform hover:scale-105 rounded-md flex items-center gap-2 border border-gray-400"
+              className="bg-primary-900  hover:bg-primary-800 transition-transform transform hover:scale-105 rounded-md flex items-center gap-2 border border-gray-400 max-sm:text-sm max-sm:w-[60%]"
             >
               <div className="p-2">
                 <div className="flex flex-col">
-                  <span className="text-lg font-semibold">{search.city}</span>
+                  <span className="lg:text-lg font-semibold">
+                    {search.city}
+                  </span>
                   <span className="text-gray-300">
                     {search.startDate} - {search.endDate}
                   </span>

@@ -80,14 +80,16 @@ export default async function Page({ searchParams }: PageProps) {
   const createBookingWithData = createBooking.bind(null, bookingData);
 
   return (
-    <main className="mx-[200px] py-6 mb-10 h-[55rem] flex items-center flex-col">
-      <h1 className="text-4xl font-semibold">Finish your hotel reservation</h1>
+    <main className="lg:mx-[200px] max-lg:mx-auto py-6 mb-10 lg:h-[55rem] flex items-center flex-col max-sm:w-[90%] max-lg:w-[80%]">
+      <h1 className="text-4xl font-semibold max-lg:text-center">
+        Finish your hotel reservation
+      </h1>
       <HotelReservationProvider>
         <form
           action={createBookingWithData}
-          className="flex mt-10 w-[1182.09px] gap-2"
+          className="flex max-lg:flex-col mt-10 lg:w-[1182.09px] max-lg:w-full gap-2"
         >
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2 ">
             <HotelDetails
               hotel={hotel}
               city={city}
@@ -106,7 +108,7 @@ export default async function Page({ searchParams }: PageProps) {
               numberOfGuests={numberOfGuests}
             />
           </div>
-          <div className="w-[852.09px] flex flex-col items-end gap-2">
+          <div className="lg:w-[852.09px] flex flex-col max-lg:items-center  lg:items-end gap-2">
             <PersonalDataHotels
               guest={guest}
               fieldNames={["fullName", "dob", "nationalID", "phoneNumber"]}
@@ -115,7 +117,7 @@ export default async function Page({ searchParams }: PageProps) {
                 name="nationality"
                 id="nationality"
                 defaultCountry={guest.nationality as string}
-                className="w-[330px] border border-black bg-primary-50 focus:border-transparent"
+                className="lg:w-[330px] border border-black bg-primary-50 focus:border-transparent"
               />
             </PersonalDataHotels>
             <AdditionalDataHotels hotel={hotel} />

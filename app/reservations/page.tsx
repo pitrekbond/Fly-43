@@ -42,7 +42,7 @@ export default async function Page() {
   );
 
   return flightsWithFlagsAndImages.length === 0 ? (
-    <span className="ml-20 text-2xl flex flex-col mt-10">
+    <span className="max-lg:text-center text-2xl flex flex-col lg:ml-20 mt-10">
       You have not reserved any flights yet.{" "}
       <Link href="/" className="underline text-accent-600">
         Check them out now!

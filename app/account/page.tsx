@@ -20,7 +20,7 @@ export default async function Page() {
     <main className="bg-primary-900 rounded-md mx-6 pt-6 pb-8 flex flex-col justify-start items-center gap-6 mb-6">
       <div className="flex flex-col items-center gap-2">
         <h2 className="text-3xl font-semibold">User profile</h2>
-        <p>
+        <p className="max-sm:text-sm max-sm:text-center">
           Providing the following information will make it easier to make a
           reservation.
         </p>
@@ -30,7 +30,7 @@ export default async function Page() {
           name="nationality"
           id="nationality"
           defaultCountry={guest.nationality}
-          className="w-[520px] bg-accent-50 text-gray-900"
+          className="max-sm:w-[90%] w-[520px] bg-accent-50 text-gray-900"
         />
       </UpdateProfileForm>
     </main>

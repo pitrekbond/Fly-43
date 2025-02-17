@@ -29,7 +29,7 @@ export default function DeleteItem({
       {/* Delete Button */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="group flex items-center gap-2 uppercase text-xs font-bold text-gray-500 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+        className="group flex items-center max-sm:justify-center gap-2 uppercase text-xs font-bold text-gray-500 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
       >
         <TrashIcon className="h-5 w-5 text-gray-500 group-hover:text-primary-50 transition-colors" />
         <span className="mt-1">Delete</span>

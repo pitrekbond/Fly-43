@@ -21,8 +21,8 @@ export default function Page({ searchParams }: PageProps) {
     searchParams;
 
   return (
-    <main className="bg-primary-900 rounded-md mx-6 pl-20 py-6 h-[40rem] flex flex-col">
-      <h1 className="text-4xl font-semibold mt-10">
+    <main className="bg-primary-900 rounded-md mx-6 lg:pl-20 py-6 lg:h-[40rem] flex flex-col max-lg:items-center">
+      <h1 className="text-xl md:text-3xl lg:text-4xl font-semibold lg:mt-10 max-lg:text-center">
         Our hotels in {city}, {country}
       </h1>
       <ResultBarHotels
@@ -33,7 +33,7 @@ export default function Page({ searchParams }: PageProps) {
         kids={kids}
         rooms={rooms}
       />
-      <div className="flex gap-6 mt-10">
+      <div className="flex max-lg:flex-col gap-6 max-sm:mt-4 mt-10">
         <BudgetHotel
           searchParams={{
             city,

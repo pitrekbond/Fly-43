@@ -15,11 +15,11 @@ export default async function Page({ params }: PageProps) {
   const flight = await getFlight(flightId);
 
   return (
-    <div className="ml-20">
-      <h2 className="font-semibold text-2xl text-accent-600 mb-2">
+    <div className="lg:ml-20 max-lg:flex max-lg:flex-col max-lg:items-center">
+      <h2 className="font-semibold text-2xl text-accent-600 mb-2 max-lg:text-center">
         Edit Flight #{flightId} {flight.from} - {flight.to}
       </h2>
-      <div className="mb-4 flex flex-wrap gap-3 max-w-[830px]">
+      <div className="mb-4 flex flex-wrap gap-3 max-w-[830px] max-lg:justify-center">
         <span className="bg-primary-950 rounded-md px-2 py-1">
           {format(flight.departure, "EEE, MMM dd yyyy")}
           {flight.returnF && ` - ${format(flight.returnF, "EEE, MMM dd yyyy")}`}

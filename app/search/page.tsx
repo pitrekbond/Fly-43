@@ -51,9 +51,9 @@ export default async function Page({ searchParams }: PageProps) {
   const totalPrice = adultPrice * adultTicket + childPrice * childTicket;
 
   return (
-    <main className="bg-primary-900 rounded-md mx-6 py-6 h-[36rem] flex">
-      <div className="w-[65%]">
-        <h1 className="text-4xl font-semibold ml-20 mt-10">
+    <main className="bg-primary-900 rounded-md mx-6 py-6 lg:h-[36rem] flex max-lg:flex-col max-lg:items-center">
+      <div className="lg:w-[65%] max-lg:w-full max-lg:flex max-lg:flex-col max-lg:items-center">
+        <h1 className="text-xl md:text-3xl lg:text-4xl font-semibold lg:ml-20 lg:mt-10 max-lg:text-center">
           Your {isReturn ? "round trip" : "one way"} flight from {from} to {to}
         </h1>
         <ResultBar
@@ -63,7 +63,7 @@ export default async function Page({ searchParams }: PageProps) {
           departureDate={departureDate}
           returnDate={returnDate}
         />
-        <div className="ml-20 mt-8 bg-primary-50 text-gray-700 rounded-md w-1/2 h-[10rem] flex gap-4">
+        <div className="lg:ml-20 mt-8 bg-primary-50 text-gray-700 rounded-md lg:w-1/2 max-lg:w-[90%] h-[10rem] flex max-sm:flex-col gap-4">
           <div className="w-2/3 py-4 pl-4">
             <p className="font-semibold">Outbound</p>
             <div
@@ -107,7 +107,7 @@ export default async function Page({ searchParams }: PageProps) {
       <Suspense fallback={<Spinner />}>
         <CityImg
           to={to}
-          className="w-[35%] flex justify-center ml-30 mr-16 my-10 relative flex-col items-center"
+          className="lg:w-[35%] max-sm:mt-[7rem] max-lg:w-[90%] flex justify-center lg:ml-30 lg:mr-16 my-10 relative flex-col items-center"
           isSearch="true"
         />
       </Suspense>

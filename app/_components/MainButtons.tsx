@@ -14,7 +14,7 @@ export default function MainButtons({
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-4 my-8 ml-[7rem]">
+    <div className="flex max-lg:justify-center gap-4 my-8 lg:ml-[7rem]">
       <Link
         href={to[0]}
         className={`p-2 rounded-md flex gap-4 border-[1.5px] border-primary-700 transition-colors duration-300 ${

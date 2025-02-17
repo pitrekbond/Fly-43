@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="grid grid-cols-5 gap-x-20 gap-y-16 text-lg items-center bg-primary-900 rounded-md mx-6 py-6 mb-6">
-      <div className="col-span-3 ml-20 mt-10">
+    <div className="grid max-sm:grid-cols-1 grid-cols-5 gap-x-20 max-sm:gap-y-2 gap-y-16 text-lg items-center bg-primary-900 rounded-md mx-6 py-6 mb-6 max-sm:w-[90%]">
+      <div className="col-span-3 md:ml-20 max-sm:mx-6 max-sm:mt-4 mt-10 max-sm:">
         <h1 className="text-4xl mb-10 text-accent-600 font-medium">
           Welcome to Fly43
         </h1>
@@ -27,7 +27,7 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="col-span-2 mr-20 transform translate-y-10">
+      <div className="max-sm:col-span-3 col-span-2 md:mr-20 max-sm:flex max-sm:justify-center transform translate-y-10 max-sm:mx-6">
         <Image
           src={wing}
           alt="Photo of a plane wing"
@@ -36,7 +36,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="relative aspect-square col-span-2 ml-20 mt-10">
+      <div className="relative aspect-square col-span-2 ml-20 mt-10 max-sm:hidden">
         <Image
           src={islandvilla}
           fill
@@ -45,7 +45,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="col-span-3 mr-20">
+      <div className="col-span-3 md:mr-20 max-sm:mx-6 max-sm:mt-12">
         <h1 className="text-4xl mb-10 text-accent-600 font-medium">Features</h1>
         <p>
           The application was created with the purpose of being user-friendly
@@ -60,7 +60,7 @@ export default function Page() {
           upcoming reservations, as well as delete them if needed.
         </p>
 
-        <div className="flex gap-4 mt-12">
+        <div className="flex gap-4 mt-12 max-sm:order-last">
           <Link
             href="/"
             className="inline-block mt-4 bg-accent-600 text-gray-800 px-6 py-4 text-lg font-semibold hover:bg-accent-700 transition-colors"

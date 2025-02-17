@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col gap-10 mt-40 items-center justify-center overflow-hidden">
-      <h2 className="text-3xl font-semibold">
+      <h2 className="text-3xl font-semibold max-lg:text-center">
         Sign in to reserve flights, book hotels and check/modify your
         reservations.
       </h2>

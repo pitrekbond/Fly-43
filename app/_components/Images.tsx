@@ -28,7 +28,7 @@ type ImagesProps = {
 
 export default function Images({ pic }: ImagesProps) {
   return (
-    <div className="w-[28%] grid grid-cols-2 grid-rows-2 justify-items-center gap-y-3">
+    <div className="w-[28%] max-lg:hidden grid grid-cols-2 grid-rows-2 justify-items-center gap-y-3">
       {pic === "plane"
         ? planeImages.map((image) => (
             <div

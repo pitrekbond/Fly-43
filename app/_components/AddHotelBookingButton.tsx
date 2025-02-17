@@ -9,7 +9,7 @@ export default function AddHotelBookingButton() {
 
   return (
     <button
-      className="bg-accent-600 hover:bg-accent-700 transition-colors w-full h-[50px] rounded-md px-4 py-1 mb-4 text-primary-50 text-xl disabled:cursor-not-allowed flex items-center justify-center gap-2"
+      className="bg-accent-600 hover:bg-accent-700 transition-colors max-lg:mt-6 max-lg:min-w-[194px] lg:w-full h-[50px] rounded-md px-4 py-1 mb-4 text-primary-50 text-xl disabled:cursor-not-allowed flex items-center justify-center gap-2"
       disabled={pending}
     >
       {!pending ? (

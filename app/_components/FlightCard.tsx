@@ -73,7 +73,7 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
 
   return (
     <>
-      <li className="flex border border-gray-700 bg-primary-50 w-[75%] text-gray-700">
+      <li className="flex max-sm:flex-col border border-gray-700 bg-primary-50 w-[75%] text-gray-700">
         <div className="relative h-[142.4px] aspect-square">
           {toCityImage && (
             <img
@@ -84,9 +84,9 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
             />
           )}
         </div>
-        <div className="flex-grow px-6 py-3 flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold flex gap-2">
+        <div className="flex-grow max-sm:px-1 md:px-6 py-3 flex flex-col gap-4">
+          <div className="flex items-center lg:justify-between max-lg:gap-4">
+            <h3 className="max-sm:text-base max-lg:text-center text-xl font-semibold flex gap-2">
               {fromCountryFlag && (
                 <Image
                   src={fromCountryFlag}
@@ -110,20 +110,20 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
               )}
             </h3>
             {isPast(returnDate) ? (
-              <span className="bg-yellow-800 text-yellow-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-yellow-800 text-yellow-200 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Past
               </span>
             ) : isTodayWithinRange ? (
-              <span className="bg-yellow-300 text-white h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-yellow-300 text-white h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Current
               </span>
             ) : (
-              <span className="bg-green-800 text-green-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-green-800 text-green-200 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Upcoming
               </span>
             )}
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center md:justify-between max-sm:gap-4">
             <p className="text-lg text-gray-500">
               {format(departureDate, "EEE, MMM dd yyyy")} (
               {isToday(departureDate)
@@ -132,23 +132,23 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
               ){isReturn && ` — ${format(returnDate, "EEE, MMM dd yyyy")}`}
             </p>
             {isReturn ? (
-              <span className="bg-blue-300 text-black h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-blue-300 text-black h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 Round-trip
               </span>
             ) : (
-              <span className="bg-black text-blue-300 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+              <span className="bg-black text-blue-300 h-7 max-sm:px-1 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
                 One-way
               </span>
             )}
           </div>
 
-          <div className="flex gap-5 mt-auto items-baseline">
+          <div className="flex gap-3 md:gap-5 mt-auto items-baseline max-sm:items-center">
             <p className="text-xl font-semibold text-accent-600">
               {currency}
               {displayedDate}
             </p>
             <p className="text-gray-500">&bull;</p>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-500 max-lg:text-center">
               {adultTicket} adult{adultTicket > 1 && "s"}
               {childTicket > 0 &&
                 `, ${childTicket} child${childTicket > 1 ? "ren" : ""}`}
@@ -158,13 +158,13 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col border-l border-gray-700 w-[100px]">
+        <div className="flex flex-col max-sm:flex-row max-sm:border-t max-sm:h-[45px] md:border-l border-gray-700 max-sm:w-full w-[100px]">
           {(!isPast(departureDate) && !isReturn) ||
           (!isPast(returnDate) && !isTodayWithinRange) ? (
             <>
               <Link
                 href={`/reservations/editFlight/${id}`}
-                className="group flex items-center gap-2 uppercase text-xs font-bold text-gray-500 border-b border-gray-700 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+                className="group flex items-center max-sm:justify-center gap-2 uppercase text-xs font-bold text-gray-500 max-sm:border-r md:border-b border-gray-700 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
               >
                 <PencilSquareIcon className="h-5 w-5 text-gray-500 group-hover:text-primary-50 transition-colors" />
                 <span className="mt-1">Edit</span>
@@ -174,7 +174,7 @@ export default function FlightCard({ flight, onDelete }: FlightCardProps) {
           ) : (
             <button
               onClick={() => setIsOpenDetails(true)}
-              className="group flex items-center gap-2 uppercase text-xs font-bold text-gray-500 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+              className="group flex items-center max-sm:justify-center gap-2 uppercase text-xs font-bold text-gray-500 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
             >
               <EyeIcon className="h-5 w-5 text-gray-500 group-hover:text-primary-50 transition-colors" />
               <span className="mt-1">View</span>

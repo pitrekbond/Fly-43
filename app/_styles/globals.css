@@ -71,3 +71,7 @@
 .modal-overlay {
   opacity: 1;
 }
+
+.react-datepicker-wrapper {
+  width: 100%; /* Force full width */
+}

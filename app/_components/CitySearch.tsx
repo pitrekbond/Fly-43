@@ -141,7 +141,7 @@ export default function CitySearch({
       {isOpenSuggestions && (
         <div
           ref={suggestionsRef}
-          className={`absolute ${className} w-[170px] bg-primary-50 rounded-md shadow-md z-10`}
+          className={`absolute ${className} w-[170px] bg-primary-50 shadow-md z-50 max-h-[140px] overflow-y-auto`}
         >
           {isLoading ? (
             <p className="p-2 text-sm text-gray-500">Loading...</p>

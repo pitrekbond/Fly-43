@@ -37,11 +37,11 @@ export default function FlightExtras({
   }
 
   return (
-    <div className="flex items-start justify-center gap-8 border-gray-400 border-b pb-8 mt-8">
-      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] mr-10">
+    <div className="flex max-lg:flex-col lg:items-start lg:justify-center max-lg:items-center max-lg:gap-4 lg:gap-8 border-gray-400 border-b pb-8 mt-8">
+      <p className="text-2xl flex flex-col items-center gap-4 w-[216.18px] lg:mr-10">
         3. Travel extras <AiOutlineFileAdd className="w-10 h-10" />
       </p>
-      <div className="border-2 border-gray-400 grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-6 p-2 rounded-md shadow-md">
+      <div className="border-2 border-gray-400 max-lg:flex max-lg:flex-col max-lg:w-[100%] lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-8 lg:gap-y-6 max-lg:gap-4 p-2 rounded-md shadow-md">
         <div className="flex flex-col gap-1">
           <label htmlFor="luggage" className="text-sm text-accent-500">
             Luggage
@@ -49,7 +49,7 @@ export default function FlightExtras({
           <select
             name="luggage"
             id="luggage"
-            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] w-[330px]"
+            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] lg:w-[330px]"
             onChange={handleChangeLuggage}
             disabled={cabinClass === "Business"}
             defaultValue={cabinClass === "Business" ? "Expanded" : "Basic"}
@@ -94,7 +94,7 @@ export default function FlightExtras({
           <select
             name="legRoom"
             id="legRoom"
-            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] w-[330px]"
+            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] lg:w-[330px]"
             onChange={handleChangeLegRoom}
             disabled={cabinClass === "Business"}
             defaultValue={cabinClass === "Business" ? "Expanded" : "Basic"}
@@ -118,7 +118,7 @@ export default function FlightExtras({
           <select
             name="seatAllocation"
             id="seatAllocation"
-            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] w-[330px]"
+            className="py-2 pl-2 disabled:bg-gray-400 disabled:text-gray-200 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] lg:w-[330px]"
             onChange={handleChangeSeatAllocation}
             disabled={numberOfPassengers === 1}
           >

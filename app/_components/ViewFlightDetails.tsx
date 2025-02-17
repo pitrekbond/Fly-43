@@ -29,7 +29,7 @@ export default function ViewFlightDetails({
     >
       <div
         ref={modalRef}
-        className="text-gray-700 border-1 border-gray-600 bg-white shadow-lg rounded-md text-lg py-6 px-8 w-[60%] max-w-2xl flex flex-col space-y-4"
+        className="text-gray-700 border-1 border-gray-600 bg-white shadow-lg rounded-md lg:text-lg py-6 px-8 max-sm:w-[80%] w-[60%] max-w-2xl flex flex-col space-y-4"
         onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <h2 className="text-2xl font-bold text-accent-600 mb-4">

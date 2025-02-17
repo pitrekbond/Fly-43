@@ -81,7 +81,7 @@ export default function EditBookingForm({ booking }: EditBookingFormProps) {
 
   return (
     <form
-      className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md text-lg py-4 px-8 w-[60%] flex flex-col"
+      className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md text-lg py-4 px-8 w-[60%] max-sm:w-[90%] max-lg:w-[80%] flex flex-col"
       action={updateBooking}
     >
       <div className="space-y-2 mb-6">
@@ -175,7 +175,10 @@ export default function EditBookingForm({ booking }: EditBookingFormProps) {
           className="rounded-md px-5 py-2 w-full shadow-sm bg-primary-50 border border-black focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
         ></textarea>
       </div>
-      <SubmitButton className="px-2 text-primary-50">
+      <SubmitButton
+        className="px-2 text-primary-50"
+        className2="max-lg:justify-center"
+      >
         Update booking {priceDifferenceText}
       </SubmitButton>
       <input type="hidden" name="id" value={booking.id} />

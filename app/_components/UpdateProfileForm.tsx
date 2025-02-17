@@ -31,37 +31,37 @@ export default function UpdateProfileForm({
 
   return (
     <form
-      className="bg-primary-950 flex flex-col items-start gap-6 w-[600px] py-8"
+      className="bg-primary-950 flex flex-col items-start gap-6 max-sm:w-[90%] w-[600px] py-8"
       action={updateProfile}
     >
-      <div className="ml-10 flex flex-col gap-2 w-full">
+      <div className="md:ml-10 flex flex-col max-sm:items-center gap-2 w-full">
         <label htmlFor="fullName">Full name</label>
         <input
           disabled
           defaultValue={fullName}
-          className="py-2 pl-2 w-[520px] disabled:bg-gray-400 disabled:text-gray-200 rounded-md"
+          className="py-2 pl-2 max-sm:w-[90%] w-[520px] disabled:bg-gray-400 disabled:text-gray-200 rounded-md"
           name="fullName"
         />
       </div>
 
-      <div className="ml-10 flex flex-col gap-2 w-full">
+      <div className="md:ml-10 flex flex-col max-sm:items-center gap-2 w-full">
         <label htmlFor="email">Email address</label>
         <input
           disabled
           defaultValue={email}
-          className="py-2 pl-2 w-[520px] disabled:bg-gray-400 disabled:text-gray-200 rounded-md"
+          className="py-2 pl-2 max-sm:w-[90%] w-[520px] disabled:bg-gray-400 disabled:text-gray-200 rounded-md"
           name="email"
         />
       </div>
 
-      <div className="ml-10 flex flex-col gap-2 w-full">
+      <div className="md:ml-10 flex flex-col max-sm:items-center gap-2 w-full">
         <label htmlFor="dateOfBirth">Date of birth</label>
         <DatePicker
           onChange={(date) => setDate(date!)} // Use the non-null assertion here
           selected={date}
           dateFormat="dd/MM/yyyy"
           id="dateOfBirth"
-          className="py-2 pl-2 w-[520px] bg-accent-50 text-gray-900 focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] rounded-md"
+          className="py-2 max-sm:ml-[1rem] pl-2 max-sm:w-[90%] w-[520px] bg-accent-50 text-gray-900 focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] rounded-md"
           name="dateOfBirth"
           popperPlacement="bottom-start"
           popperContainer={({ children }) => (
@@ -73,16 +73,16 @@ export default function UpdateProfileForm({
         />
       </div>
 
-      <div className="ml-10 flex flex-col gap-2 w-full">
+      <div className="md:ml-10 flex flex-col max-sm:items-center gap-2 w-full">
         <label htmlFor="nationalID">National ID number</label>
         <input
           defaultValue={nationalID}
-          className="py-2 pl-2 w-[520px] bg-accent-50 text-gray-900 focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] rounded-md"
+          className="py-2 pl-2 max-sm:w-[90%] w-[520px] bg-accent-50 text-gray-900 focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] rounded-md"
           name="nationalID"
         />
       </div>
 
-      <div className="ml-10 flex flex-col gap-2 w-full">
+      <div className="md:ml-10 flex flex-col max-sm:items-center gap-2 w-full">
         <div className="flex items-center justify-between">
           <label htmlFor="nationality">Where are you from?</label>
           {countryFlag && (
@@ -100,7 +100,7 @@ export default function UpdateProfileForm({
         {children}
       </div>
 
-      <div className="flex flex-col items-end w-full">
+      <div className="flex flex-col max-sm:items-center items-end w-full">
         <ButtonProfile />
       </div>
     </form>

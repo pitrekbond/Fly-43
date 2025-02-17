@@ -25,7 +25,7 @@ export default function PriceHotel({
     totalPrice + totalBreakfastPrice + (hasTransfer ? TRANSFER_PRICE : 0);
 
   return (
-    <div className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 flex flex-col items-start w-[320px]">
+    <div className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 flex flex-col items-start max-lg:w-[80%] lg:w-[320px]">
       <p className="text-xl font-semibold px-2">Your price summary</p>
       <div className="flex justify-between text-2xl font-semibold py-4 bg-accent-200 w-full mt-3">
         <span className="ml-2">Total</span>

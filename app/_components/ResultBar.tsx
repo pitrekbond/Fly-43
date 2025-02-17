@@ -101,9 +101,9 @@ export default function ResultBar({
 
   return (
     <>
-      <div className="flex gap-[6px] mt-4 h-[48px]">
+      <div className="flex max-sm:flex-col max-lg:justify-center max-sm:items-center gap-[6px] mt-4 md:h-[48px]">
         <button
-          className="bg-primary-950 ml-20 px-4 flex items-center rounded-md max-w-[386px] sm:text-sm truncate hover:bg-[#1e083e] transition-colors"
+          className="bg-primary-950 lg:ml-20 px-4 flex items-center rounded-md max-sm:w-[90%] max-w-[386px] sm:text-sm truncate hover:bg-[#1e083e] transition-colors"
           style={{ wordWrap: "break-word", whiteSpace: "normal" }}
           onClick={() => setIsOpenGuestSelector(true)}
         >
@@ -111,66 +111,72 @@ export default function ResultBar({
           {adultTicket} Adult{adultTicket > 1 && "s"}, {childTicket} Child
           {childTicket > 1 && "ren"}) {cabinClass} Class
         </button>
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-          onClick={() =>
-            handleSubstractDay(newDateD, setNewDateD, "departureDate")
-          }
-          disabled={departureDate === formattedToday}
-        >
-          <GrPrevious className="h-5 w-5" />
-        </button>
-        {/*so many divs because otherwise the layout shifts for some reason*/}
-        <div className="w-[110px] flex-none">
-          <div className="h-full flex items-center justify-center">
-            <span className="text-center block w-full truncate">
-              {formattedDateD}
-            </span>
+        <div className="flex gap-[6px]">
+          {" "}
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+            onClick={() =>
+              handleSubstractDay(newDateD, setNewDateD, "departureDate")
+            }
+            disabled={departureDate === formattedToday}
+          >
+            <GrPrevious className="h-5 w-5" />
+          </button>
+          {/*so many divs because otherwise the layout shifts for some reason*/}
+          <div className="w-[110px] flex-none">
+            <div className="h-full flex items-center justify-center">
+              <span className="text-center block w-full truncate">
+                {formattedDateD}
+              </span>
+            </div>
           </div>
+          <button
+            className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+            onClick={() => handleAddDay(newDateD, setNewDateD, "departureDate")}
+            disabled={departureDate === returnDate}
+          >
+            <GrNext className="h-5 w-5" />
+          </button>
         </div>
-        <button
-          className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-          onClick={() => handleAddDay(newDateD, setNewDateD, "departureDate")}
-          disabled={departureDate === returnDate}
-        >
-          <GrNext className="h-5 w-5" />
-        </button>
+
         {formattedDateR && (
           <>
             <div className="flex items-center justify-center">
               <BsDot className="h-5 w-5" />
             </div>
-            <button
-              className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
-              onClick={() =>
-                handleSubstractDay(
-                  newDateR as string,
-                  setNewDateR,
-                  "returnDate"
-                )
-              }
-              disabled={
-                returnDate === formattedToday || returnDate === departureDate
-              }
-            >
-              <GrPrevious className="h-5 w-5" />
-            </button>
-            {/*so many divs because otherwise the layout shifts for some reason*/}
-            <div className="w-[110px] flex-none">
-              <div className="h-full flex items-center justify-center">
-                <span className="text-center block w-full truncate">
-                  {formattedDateR}
-                </span>
+            <div className="flex gap-[6px]">
+              <button
+                className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md disabled:cursor-not-allowed disabled:bg-primary-900"
+                onClick={() =>
+                  handleSubstractDay(
+                    newDateR as string,
+                    setNewDateR,
+                    "returnDate"
+                  )
+                }
+                disabled={
+                  returnDate === formattedToday || returnDate === departureDate
+                }
+              >
+                <GrPrevious className="h-5 w-5" />
+              </button>
+              {/*so many divs because otherwise the layout shifts for some reason*/}
+              <div className="w-[110px] flex-none">
+                <div className="h-full flex items-center justify-center">
+                  <span className="text-center block w-full truncate">
+                    {formattedDateR}
+                  </span>
+                </div>
               </div>
+              <button
+                className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md"
+                onClick={() =>
+                  handleAddDay(newDateR as string, setNewDateR, "returnDate")
+                }
+              >
+                <GrNext className="h-5 w-5" />
+              </button>
             </div>
-            <button
-              className="bg-primary-950 px-2 hover:bg-[#1e083e] transition-colors rounded-md"
-              onClick={() =>
-                handleAddDay(newDateR as string, setNewDateR, "returnDate")
-              }
-            >
-              <GrNext className="h-5 w-5" />
-            </button>
           </>
         )}
       </div>
@@ -184,7 +190,7 @@ export default function ResultBar({
           cabinClass={newCabin}
           setCabinClass={setNewCabin}
           updateURLOther={updateURLOther}
-          className="bottom-[15.3rem] left-[6.5rem] 2xl:bottom-[22.8rem] 2xl:left-[6.6rem]"
+          className="bottom-[15.3rem] left-[6.5rem] 2xl:bottom-[22.8rem] 2xl:left-[6.6rem] max-sm:bottom-[17.9rem] max-sm:left-[2.2rem] max-lg:bottom-[40.5rem] max-lg:left-[1.8rem]"
         />
       )}
     </>

@@ -24,8 +24,10 @@ export default async function Page({ searchParams }: PageProps) {
   const guest = await getGuest(session.user.email);
 
   return (
-    <main className="bg-primary-50 text-gray-700 rounded-md mx-[230px] py-6 mb-10 h-[75rem] flex items-center flex-col">
-      <h1 className="text-4xl font-semibold">Finish your flight reservation</h1>
+    <main className="bg-primary-50 text-gray-700 rounded-md lg:mx-[230px] py-6 mb-10 lg:h-[75rem] flex items-center flex-col max-sm:w-[90%] max-lg:w-[80%] max-lg:mx-auto">
+      <h1 className="text-4xl font-semibold max-lg:text-center">
+        Finish your flight reservation
+      </h1>
       <FlightReservationForm guest={guest} searchParams={searchParams} />
     </main>
   );
