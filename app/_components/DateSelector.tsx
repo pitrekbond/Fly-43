@@ -56,7 +56,7 @@ export default function DateSelector({
       <div
         className={`rounded-md max-sm:text-xs shadow-md bg-white absolute ${className} 
           sm:w-[50rem] max-lg:w-[45rem]
-          max-sm:w-[90%] max-sm:h-[75vh]`}
+          max-sm:w-[90%] max-sm:h-[480px]`}
         onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <div className="flex flex-col">
@@ -81,12 +81,18 @@ export default function DateSelector({
               />
             )}
           </div>
-          <div className="flex justify-center pb-4">
+          <div className="flex justify-center pb-4 gap-6">
             <button
               className="text-black border border-gray-600 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
               onClick={resetSelection}
             >
               Clear
+            </button>
+            <button
+              className="text-accent-50 bg-accent-600 hover:bg-accent-600 transition-colors py-2 px-4 rounded-md"
+              onClick={onClose}
+            >
+              Apply
             </button>
           </div>
         </div>

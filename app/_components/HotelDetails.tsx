@@ -37,7 +37,7 @@ export default function HotelDetails({
   }
 
   return (
-    <div className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col items-start max-lg:w-[80%] lg:w-[320px]">
+    <div className="text-gray-700 border-1 border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col items-start max-sm:w-[90%] max-lg:w-[80%] lg:w-[320px]">
       <p className="text-xl font-semibold">{hotel} Hotel</p>
       <p className="mb-3">
         {city}, {country}

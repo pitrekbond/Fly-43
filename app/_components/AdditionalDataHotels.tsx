@@ -35,7 +35,7 @@ export default function AdditionalDataHotels({
   };
 
   return (
-    <div className="text-gray-700 border border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col max-lg:w-[80%] lg:w-full">
+    <div className="text-gray-700 border border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col max-sm:w-[90%] max-lg:w-[80%] lg:w-full">
       <p className="text-xl font-semibold">Add to your stay</p>
 
       <div className="mt-4">

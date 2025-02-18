@@ -47,7 +47,7 @@ export default function AdditionalFlightData() {
           <textarea
             id="other"
             name="other"
-            className="py-2 pl-2 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] lg:w-[400px]"
+            className="py-2 pl-2 rounded-md bg-primary-50 text-gray-700 focus:border-transparent border border-black focus:outline-none focus:ring-[1.5px] focus:ring-accent-500 outline-offset-[-1px] max-sm:w-[80%] lg:w-[400px]"
           />
         </div>
       </div>

@@ -93,7 +93,7 @@ export default function UpdateProfileForm({
               height="30"
               width="30"
               quality={100}
-              className="mr-20"
+              className="max-sm:ml-4 md:mr-20"
             />
           )}
         </div>

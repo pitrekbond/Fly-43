@@ -28,7 +28,7 @@ export default function PersonalDataHotels({
   const [date, setDate] = useState<Date>(dateOfBirth || new Date());
 
   return (
-    <div className="text-gray-700 border border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col max-lg:w-[80%] lg:w-full">
+    <div className="text-gray-700 border border-gray-600 bg-primary-50 shadow-sm rounded-md py-3 px-2 flex flex-col max-sm:w-[90%] max-lg:w-[80%] lg:w-full">
       <p className="text-xl font-semibold">Enter your details</p>
       <div className="mt-4 lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-4 lg:gap-y-6 max-lg:gap-4 max-lg:flex max-lg:flex-col">
         <div className="flex flex-col gap-1">
